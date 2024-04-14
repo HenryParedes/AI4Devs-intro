@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversar Cadena</title>
+    <!-- Favicon de Lionel Messi -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Leo_Messi_August_2018.jpg/220px-Leo_Messi_August_2018.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #textoInput {
+            width: 300px;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        #botonReversar {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reversar Cadena</h1>
+    <input type="text" id="textoInput" placeholder="Ingresa un texto...">
+    <button id="botonReversar">Reversar Cadena</button>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('botonReversar').addEventListener('click', function() {
+            // Obtener el texto ingresado por el usuario
+            var texto = document.getElementById('textoInput').value;
+            // Reversar el texto
+            var textoReversado = reverseString(texto);
+            // Mostrar el texto reversado en pantalla
+            document.getElementById('resultado').innerText = textoReversado;
+        });
+
+        // Función para revertir una cadena de texto
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>
